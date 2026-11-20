@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System Login</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #142b4a, #3674a8);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: white;
+    width: 400px;
+    max-width: 90%;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo .icon {
+    font-size: 50px;
+}
+
+.logo h2 {
+    color: #142b4a;
+    margin-top: 10px;
+}
+
+.logo p {
+    color: gray;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+h3 {
+    color: #142b4a;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #3674a8;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #2a6ec7;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3674a8;
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    color: gray;
+    font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <div class="logo">
+        <div class="icon">🎓</div>
+        <h2>Student Management System</h2>
+        <p>Welcome to your student portal</p>
+    </div>
+
+    <h3>Welcome Back!</h3>
+
+    <form id="loginForm">
+
+        <label for="Username">Username</label>
+        <input
+            type="text"
+            id="Username"
+            placeholder="Enter your Student ID"
+            required
+        >
+
+        <label for="Password">Password</label>
+        <input
+            type="password"
+            id="Password"
+            placeholder="Enter your Password"
+            required
+        >
+
+        <button type="submit">LOG IN</button>
+
+        <p id="message"></p>
+
+    </form>
+
+    <div class="footer">
+        Student Management System &copy; 2026
+    </div>
+
+</div>
+
+<script>
+
+document.getElementById("loginForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const studentID =
+        document.getElementById("Username").value.trim();
+
+    const password =
+        document.getElementById("Password").value.trim();
+
+    const message =
+        document.getElementById("message");
+
+    // Sample login credentials
+    const correctUsername = "student123";
+    const correctPassword = "123456";
+
+    if (studentID === correctUsername &&
+        password === correctPassword) {
+
+        message.style.color = "green";
+        message.textContent = "Login successful! Welcome!";
+
+        sessionStorage.setItem("authToken", "loggedIn");
+        sessionStorage.setItem("studentID", studentID);
+
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 1000);
+
+    } else {
+
+        message.style.color = "red";
+        message.textContent = "Invalid Username or Password!";
+        window.location.href="index.html";
+    }
+
+});
+
+</script>
+
+</body>
+</html>

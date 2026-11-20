@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <header class="header">
+            <div>
+                <h1>Student Management System</h1>
+               
+            </div>
+
+
+            
+        
+        </header>
+
+        <main>
+
+           
+            <section class="card">
+
+                <div class="section-header">
+                    <h2>Add New Student</h2>
+                </div>
+
+                <form id="studentForm">
+
+                    <div class="form-group">
+                        <label for="name">Student Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter email address"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="program">Select Program</label>
+
+                        <select id="program" required>
+                            <option value="">Choose a program</option>
+                            <option value="BSIS">BS Information System</option>
+                            <option value="BSCS">BS Computer Science</option>
+                            <option value="BSBA">BS Business Administration</option>
+                            <option value="BSED">BS Secondary Education</option>
+                            <option value="BSHM">BS Hospitality Management</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="saveBtn" id="addStudentBtn">
+    Add Student
+</button>
+
+                </form>
+
+                <div id="message" class="message"></div>
+
+            </section>
+
+            
+            <section class="card">
+
+                <div class="records-header">
+                    <div>
+                        <h2>Student Records</h2>
+                        <p>View and manage registered students.</p>
+                    </div>
+
+                    <div class="student-count">
+                        <span id="totalStudents">0</span>
+                        <small>Total Students</small>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Student Name</th>
+                                <th>Email Address</th>
+                                <th>Program</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="studentTable">
+                            <tr id="emptyRow">
+                                <td colspan="5" class="empty-message">
+                                    No student records available.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Student Management System &copy; 2026</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

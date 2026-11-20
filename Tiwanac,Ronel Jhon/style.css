@@ -1,0 +1,266 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #e7a0066e;
+    color: #f7a10200;
+    padding: 35px 20px;
+    transition: 0.3s ease;
+    background-color: #f76402;
+}
+
+
+.main-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.header {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.15);
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+
+.theme-btn {
+    background: white;
+    color: #1e40af;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: #dbeafe;
+}
+
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.section-header,
+.records-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+h2 {
+    font-size: 21px;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.section-header p,
+.records-header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #334155;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 14px;
+    background: #fff;
+    color: #1e293b;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+}
+
+
+.add-btn {
+    background: #2563eb;
+    color: rgb(60, 13, 230);
+    border: none;
+    padding: 13px 22px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #e2263fc0;
+    transform: translateY(-1px);
+}
+
+
+.message {
+    display: none;
+    margin-top: 18px;
+    padding: 12px 15px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.message.success {
+    display: block;
+    color: #15803d;
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+}
+
+.message.error {
+    display: block;
+    color: #b91c1c;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+
+.student-count {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 125px;
+}
+
+.student-count span {
+    display: block;
+    color: #2563eb;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.student-count small {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+thead {
+    background: #2563eb;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tbody tr:hover:not(#emptyRow) {
+    background: #eff6ff;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 30px;
+    color: #94a3b8;
+}
+
+
+.program-badge {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    padding: 15px;
+}
